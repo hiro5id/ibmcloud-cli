@@ -19,6 +19,8 @@ sebestyen/ibmcloud-cli:latest \
 bash -c 'tail -f /dev/null'
 ```
 
+
+
 Note:
 
 * It is using the **latest** tag. If you wish to insulate yourself from breakages you can use a specific version tag such as **1.0.0** please see `tags` tab for additional available versions.
@@ -32,6 +34,8 @@ Enter the container at any time to run commands like this:
 ```
 docker exec -it ibmcloud-cli bash
 ```
+
+
 
 This will put you into the work directory `/workdir` which in turn is mapped to the host's current directory from where the container was launched.
 
