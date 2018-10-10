@@ -1,12 +1,6 @@
 # Usages
 
-```
-docker run -d -v /var/run/docker.sock:/var/run/docker.sock ubuntu bash -c 'tail -f /dev/null'
-```
-
-
-
-You can use this container in two ways:
+You can use this container in two ways;
 
 #### 1) Start up the container and let it run in the background
 This mode allowd you to create a sort of "session" that you can come back to, because the container keeps running in the background until you shut it down, you can keep re-connecting to the "session"
