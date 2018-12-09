@@ -47,6 +47,41 @@ This will put you into the work directory `/workdir` which in turn is mapped to 
 
 
 
+## Gain access to your cluster
+
+##### 1. Log in to your IBM Cloud account
+```
+ibmcloud login -a https://api.ng.bluemix.net
+```
+`If you have a federated ID, use ibmcloud login --sso to log in to the IBM Cloud CLI.`
+
+##### 2. Target the IBM Cloud Container Service region in which you want to work.
+
+```
+ibmcloud cs region-set us-south
+```
+
+##### 3. Get the command to set the environment variable and download the Kubernetes configuration files.
+
+```
+ibmcloud cs cluster-config <cluster-name>
+```
+
+##### 4. Set the KUBECONFIG environment variable. Copy the output from the previous command and paste it in your terminal. The command output should look similar to the following.
+
+```
+export KUBECONFIG=/Users/$USER/.bluemix/plugins/container-service/clusters/<cluster-name>/kube-config-dal13-<cluster-name>.yml
+```
+
+Alternatively, you may directly [download](https://console.bluemix.net/containers-kubernetes/api/clusters/4c4df6f203d94d1fa30affdd0e11dd86/kubeconfig?accountId=4be8ba48b01506e9a78090aced0efdbb&region=ibm:yp:us-south&resourceGroup=) your kubeconfig files to manually configure the kubernetes cluster context.
+
+##### 5 Verify that you can connect to your cluster by listing your worker nodes.
+
+```
+kubectl get nodes
+```
+
+
 ## How to use Kubernetes on IBM Cloud
 
 * [Learn Kubernetes Basics](https://kubernetes.io/docs/tutorials/kubernetes-basics/)
