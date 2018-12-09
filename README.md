@@ -73,7 +73,7 @@ ibmcloud cs cluster-config <cluster-name>
 export KUBECONFIG=/Users/$USER/.bluemix/plugins/container-service/clusters/<cluster-name>/kube-config-dal13-<cluster-name>.yml
 ```
 
-Alternatively, you may directly [download](https://console.bluemix.net/containers-kubernetes/api/clusters/4c4df6f203d94d1fa30affdd0e11dd86/kubeconfig?accountId=4be8ba48b01506e9a78090aced0efdbb&region=ibm:yp:us-south&resourceGroup=) your kubeconfig files to manually configure the kubernetes cluster context.
+Alternatively, you may directly download your kubeconfig files to manually configure the kubernetes cluster context.
 
 ##### 5 Verify that you can connect to your cluster by listing your worker nodes.
 
