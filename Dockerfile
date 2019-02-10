@@ -11,3 +11,5 @@ RUN curl -sL https://ibm.biz/idt-installer | bash
 RUN rm -rf /root/.bluemix/plugins/container-service || true
 # Now let's install the plugin
 RUN ibmcloud plugin install container-service
+# List installed plugins just for display purposes
+RUN ibmcloud plugin list
